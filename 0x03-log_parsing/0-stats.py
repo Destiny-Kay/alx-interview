@@ -13,6 +13,7 @@ def print_stats(total_file_size, status_codes_stats):
         if num > 0:
             print('{:s}: {:d}'.format(status_code, num), flush=True)
 
+
 def get_input(line):
     '''
     Extacts http log lines from stdin
@@ -36,6 +37,7 @@ def get_input(line):
         info['status_code'] = status_code
         info['file_size'] = file_size
     return info
+
 
 def update_metrics(line, total_file_size, status_codes_stats):
     '''
