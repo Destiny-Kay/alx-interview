@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-import request from 'request';
+const request = require('request')
 
 
 request(`https://swapi-api.alx-tools.com/api/films/${process.argv[2]}`, function (err, _, body) {
