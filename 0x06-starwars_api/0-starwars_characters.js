@@ -1,8 +1,9 @@
 #!/usr/bin/node
 
-const request = require('request');
+import request from 'request';
 
-request('https://swapi-api.hbtn.io/api/films/' + process.argv[2], function (err, res, body) {
+
+request(`https://swapi-api.alx-tools.com/api/films/${process.argv[2]}`, function (err, _, body) {
   if (err) throw err;
   const actors = JSON.parse(body).characters;
   exactOrder(actors, 0);
